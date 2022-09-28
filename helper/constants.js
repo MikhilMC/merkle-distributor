@@ -17,4 +17,11 @@ module.exports = {
       "0xce8054ec695b06c05e8fc6b9a68706aabd7b263ccbf342b0a0b2e664b2e4ecb0",
     merkleDistributorContract: "0xBbE95b39b7557f692075E3CAe97383470b51a956.",
   },
+  merkleDistributorFactory: {
+    sampleToken: "0x444fB0d057c7D9aCdAbeAc2a5A82d9D8251dBDA3",
+    merkleDistributorWithoutTimeDuration:
+      "0xdb1aD4Cd230A33F587b03D8e5Bb3Cf13D347C65B",
+    merkleDistributorWithTimeDuration:
+      "0x3E826ec43b81449ebE839CB14621815995B8C778",
+  },
 };
