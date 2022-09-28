@@ -83,7 +83,10 @@ describe("MerkleDistributorV3.sol", () => {
     MerkleDistributor = await ethers.getContractFactory("MerkleDistributorV3");
     merkleDistributor = await MerkleDistributor.deploy(
       testERC20Address,
-      hexRoot
+      hexRoot,
+      false,
+      0,
+      0
     );
     await merkleDistributor.deployed();
     merkleDistributorAddress = await merkleDistributor.address;
@@ -127,6 +130,18 @@ describe("MerkleDistributorV3.sol", () => {
       const expectedDescription =
         "Merkle Distributor contract with individual timestamp";
       expect(description).to.equal(expectedDescription);
+    });
+
+    it("The merkle distributor have correct timelock status", async () => {
+      const hasTimelock = await merkleDistributor.hasTimelock();
+      expect(hasTimelock).to.be.false;
+    });
+
+    it("The merkle distributor have starting and ending timelock value", async () => {
+      const startingTime = await merkleDistributor.startingTime();
+      const endingTime = await merkleDistributor.endingTime();
+      expect(startingTime).to.equal(0);
+      expect(endingTime).to.equal(0);
     });
   });
 

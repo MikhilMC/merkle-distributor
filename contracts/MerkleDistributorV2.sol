@@ -3,10 +3,11 @@ pragma solidity ^0.8.9;
 
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/utils/cryptography/MerkleProof.sol";
+import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 // import "./MerkleProof.sol";
 import "./interfaces/IMerkleDistributorV2.sol";
 
-contract MerkleDistributorV2 is IMerkleDistributorV2 {
+contract MerkleDistributorV2 is IMerkleDistributorV2, ReentrancyGuard {
     string public constant description = "Merkle Distributor contract with common timestamp";
     address public immutable override token;
     bytes32 public immutable override merkleRoot;
@@ -35,7 +36,12 @@ contract MerkleDistributorV2 is IMerkleDistributorV2 {
         claimedBitMap[claimedWordIndex] = claimedBitMap[claimedWordIndex] | (1 << claimedBitIndex);
     }
 
-    function claim(uint256 index, address account, uint256 amount, bytes32[] calldata merkleProof) external override {
+    function claim(
+        uint256 index,
+        address account,
+        uint256 amount,
+        bytes32[] calldata merkleProof
+    ) external override nonReentrant {
         require(!isClaimed(index), 'MerkleDistributor: Drop already claimed.');
 
         // Checking whether timestamp have expired, and token is available for claiming
