@@ -24,4 +24,18 @@ module.exports = {
     merkleDistributorWithTimeDuration:
       "0x3E826ec43b81449ebE839CB14621815995B8C778",
   },
+  merkleDistributorNFTV1: {
+    constracts: [
+      "0xCA01c77808a110C22A6d6290a016cf723eD1b6C2",
+      "0xcD4Bd24EBDF2caF8034E47034425c5f88a46dBE4",
+      "0x6F206c60E57BCdD1e51bCc300d06470304CF919b",
+    ],
+    merkleTreeRoot:
+      "0x7adbc662c81b5c22cecc1fe12bb8abe00f802d78984878b9cb21af4d0faed849",
+  },
+  merkleDistributorNFTV2: {
+    constracts: "0xA2148763E68339077cB2D923946a3F789C0eE457",
+    merkleTreeRoot:
+      "0x7adbc662c81b5c22cecc1fe12bb8abe00f802d78984878b9cb21af4d0faed849",
+  },
 };

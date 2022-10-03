@@ -1,10 +1,10 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "/home/mikhil/work/MD/merkle-distributor/contracts/MerkleDistributorV1.sol": {
-      "lastModificationDate": 1664346635762,
-      "contentHash": "2aca1444285f0677475cb940541f6375",
-      "sourceName": "contracts/MerkleDistributorV1.sol",
+    "/home/mikhil/work/MD/merkle-distributor/contracts/MerkleDistributorERC721V1.sol": {
+      "lastModificationDate": 1664779190525,
+      "contentHash": "0a2809561da6a8ce2db59b8471626ebb",
+      "sourceName": "contracts/MerkleDistributorERC721V1.sol",
       "solcConfig": {
         "version": "0.8.9",
         "settings": {
@@ -29,86 +29,57 @@
         }
       },
       "imports": [
-        "@openzeppelin/contracts/token/ERC20/IERC20.sol",
-        "@openzeppelin/contracts/utils/cryptography/MerkleProof.sol",
-        "@openzeppelin/contracts/security/ReentrancyGuard.sol",
-        "./interfaces/IMerkleDistributorV1.sol"
+        "@openzeppelin/contracts/token/ERC721/ERC721.sol",
+        "@openzeppelin/contracts/utils/cryptography/MerkleProof.sol"
       ],
-      "versionPragmas": [
-        "^0.8.9"
-      ],
-      "artifacts": [
-        "MerkleDistributorV1"
-      ]
-    },
-    "/home/mikhil/work/MD/merkle-distributor/contracts/interfaces/IMerkleDistributorV1.sol": {
-      "lastModificationDate": 1663765107696,
-      "contentHash": "56f8203afc194141756401ebc368ad67",
-      "sourceName": "contracts/interfaces/IMerkleDistributorV1.sol",
-      "solcConfig": {
-        "version": "0.8.9",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        ">=0.5.0"
-      ],
-      "artifacts": [
-        "IMerkleDistributorV1"
-      ]
-    },
-    "/home/mikhil/work/MD/merkle-distributor/node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
-      "lastModificationDate": 1663738583565,
-      "contentHash": "ad7c2d0af148c8f9f097d65deeb4da6b",
-      "sourceName": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
-      "solcConfig": {
-        "version": "0.8.9",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
       "versionPragmas": [
         "^0.8.0"
       ],
       "artifacts": [
-        "IERC20"
+        "MerkleDistributorERC721V1"
+      ]
+    },
+    "/home/mikhil/work/MD/merkle-distributor/node_modules/@openzeppelin/contracts/token/ERC721/ERC721.sol": {
+      "lastModificationDate": 1663738583429,
+      "contentHash": "79ff1a7eb801a525aa315fb7a679eede",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/ERC721.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC721.sol",
+        "./IERC721Receiver.sol",
+        "./extensions/IERC721Metadata.sol",
+        "../../utils/Address.sol",
+        "../../utils/Context.sol",
+        "../../utils/Strings.sol",
+        "../../utils/introspection/ERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ERC721"
       ]
     },
     "/home/mikhil/work/MD/merkle-distributor/node_modules/@openzeppelin/contracts/utils/cryptography/MerkleProof.sol": {
@@ -144,6 +115,292 @@
       ],
       "artifacts": [
         "MerkleProof"
+      ]
+    },
+    "/home/mikhil/work/MD/merkle-distributor/node_modules/@openzeppelin/contracts/utils/Address.sol": {
+      "lastModificationDate": 1663738583249,
+      "contentHash": "c476b3895a94798b88a4bb97399e6dfe",
+      "sourceName": "@openzeppelin/contracts/utils/Address.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.1"
+      ],
+      "artifacts": [
+        "Address"
+      ]
+    },
+    "/home/mikhil/work/MD/merkle-distributor/node_modules/@openzeppelin/contracts/utils/Context.sol": {
+      "lastModificationDate": 1663738583269,
+      "contentHash": "5f2c5c4b6af2dd4551027144797bc8be",
+      "sourceName": "@openzeppelin/contracts/utils/Context.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Context"
+      ]
+    },
+    "/home/mikhil/work/MD/merkle-distributor/node_modules/@openzeppelin/contracts/utils/Strings.sol": {
+      "lastModificationDate": 1663738583645,
+      "contentHash": "cf46906c4035f51639a22265066a9e78",
+      "sourceName": "@openzeppelin/contracts/utils/Strings.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Strings"
+      ]
+    },
+    "/home/mikhil/work/MD/merkle-distributor/node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol": {
+      "lastModificationDate": 1663738583577,
+      "contentHash": "ec99d946db3685a3630554aa6055bd7f",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../utils/introspection/IERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC721"
+      ]
+    },
+    "/home/mikhil/work/MD/merkle-distributor/node_modules/@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol": {
+      "lastModificationDate": 1663738583585,
+      "contentHash": "c22d4395e33763de693fd440c6fd10e1",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC721Receiver"
+      ]
+    },
+    "/home/mikhil/work/MD/merkle-distributor/node_modules/@openzeppelin/contracts/utils/introspection/ERC165.sol": {
+      "lastModificationDate": 1663738583365,
+      "contentHash": "0e7db055ce108f9da7bb6686a00287c0",
+      "sourceName": "@openzeppelin/contracts/utils/introspection/ERC165.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ERC165"
+      ]
+    },
+    "/home/mikhil/work/MD/merkle-distributor/node_modules/@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol": {
+      "lastModificationDate": 1663738583581,
+      "contentHash": "efbc0d15b80a74e34dbe8da0f3e879bb",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../IERC721.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC721Metadata"
+      ]
+    },
+    "/home/mikhil/work/MD/merkle-distributor/node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+      "lastModificationDate": 1663738583549,
+      "contentHash": "03e6768535ac4da0e9756f1d8a4a018a",
+      "sourceName": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC165"
       ]
     },
     "/home/mikhil/work/MD/merkle-distributor/contracts/MerkleDistributorV3.sol": {
@@ -219,6 +476,76 @@
       ],
       "artifacts": [
         "IMerkleDistributorV3"
+      ]
+    },
+    "/home/mikhil/work/MD/merkle-distributor/node_modules/@openzeppelin/contracts/security/ReentrancyGuard.sol": {
+      "lastModificationDate": 1663738583629,
+      "contentHash": "92f9448b23a90ea3bb932ee55cc3ccce",
+      "sourceName": "@openzeppelin/contracts/security/ReentrancyGuard.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ReentrancyGuard"
+      ]
+    },
+    "/home/mikhil/work/MD/merkle-distributor/node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+      "lastModificationDate": 1663738583565,
+      "contentHash": "ad7c2d0af148c8f9f097d65deeb4da6b",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC20"
       ]
     },
     "/home/mikhil/work/MD/merkle-distributor/node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
@@ -297,45 +624,10 @@
         "ERC20"
       ]
     },
-    "/home/mikhil/work/MD/merkle-distributor/node_modules/@openzeppelin/contracts/utils/Context.sol": {
-      "lastModificationDate": 1663738583269,
-      "contentHash": "5f2c5c4b6af2dd4551027144797bc8be",
-      "sourceName": "@openzeppelin/contracts/utils/Context.sol",
-      "solcConfig": {
-        "version": "0.8.9",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "Context"
-      ]
-    },
-    "/home/mikhil/work/MD/merkle-distributor/contracts/test/TestERC20.sol": {
-      "lastModificationDate": 1663765091864,
-      "contentHash": "c0b9b25016df378788c623590a7babd0",
-      "sourceName": "contracts/test/TestERC20.sol",
+    "/home/mikhil/work/MD/merkle-distributor/contracts/MerkleDistributorERC721V3.sol": {
+      "lastModificationDate": 1664777835186,
+      "contentHash": "a1588496d8a5b3dee9876b4f02aeaf1e",
+      "sourceName": "contracts/MerkleDistributorERC721V3.sol",
       "solcConfig": {
         "version": "0.8.9",
         "settings": {
@@ -360,13 +652,129 @@
         }
       },
       "imports": [
-        "@openzeppelin/contracts/token/ERC20/ERC20.sol"
+        "@openzeppelin/contracts/token/ERC721/ERC721.sol",
+        "@openzeppelin/contracts/utils/cryptography/MerkleProof.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "MerkleDistributorERC721V3"
+      ]
+    },
+    "/home/mikhil/work/MD/merkle-distributor/contracts/MerkleDistributorERC721V2.sol": {
+      "lastModificationDate": 1664778704850,
+      "contentHash": "6a7749e48e9fb847ed5536cfa9e2ef77",
+      "sourceName": "contracts/MerkleDistributorERC721V2.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC721/ERC721.sol",
+        "@openzeppelin/contracts/utils/cryptography/MerkleProof.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "MerkleDistributorERC721V2"
+      ]
+    },
+    "/home/mikhil/work/MD/merkle-distributor/node_modules/@openzeppelin/contracts/access/Ownable.sol": {
+      "lastModificationDate": 1663738583621,
+      "contentHash": "e436cea06129be2c73cda4b1acc848b5",
+      "sourceName": "@openzeppelin/contracts/access/Ownable.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/Context.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Ownable"
+      ]
+    },
+    "/home/mikhil/work/MD/merkle-distributor/contracts/MerkleDistributorFactory.sol": {
+      "lastModificationDate": 1664346489873,
+      "contentHash": "203d828dd8096c507b308c9a08ca2107",
+      "sourceName": "contracts/MerkleDistributorFactory.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/access/Ownable.sol",
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "@openzeppelin/contracts/security/ReentrancyGuard.sol",
+        "./MerkleDistributorV3.sol"
       ],
       "versionPragmas": [
         "^0.8.9"
       ],
       "artifacts": [
-        "TestERC20"
+        "MerkleDistributionFactory"
       ]
     },
     "/home/mikhil/work/MD/merkle-distributor/contracts/MerkleDistributorV2.sol": {
@@ -444,10 +852,10 @@
         "IMerkleDistributorV2"
       ]
     },
-    "/home/mikhil/work/MD/merkle-distributor/contracts/MerkleDistributorFactory.sol": {
-      "lastModificationDate": 1664346489873,
-      "contentHash": "203d828dd8096c507b308c9a08ca2107",
-      "sourceName": "contracts/MerkleDistributorFactory.sol",
+    "/home/mikhil/work/MD/merkle-distributor/contracts/MerkleDistributorV1.sol": {
+      "lastModificationDate": 1664346635762,
+      "contentHash": "2aca1444285f0677475cb940541f6375",
+      "sourceName": "contracts/MerkleDistributorV1.sol",
       "solcConfig": {
         "version": "0.8.9",
         "settings": {
@@ -472,59 +880,22 @@
         }
       },
       "imports": [
-        "@openzeppelin/contracts/access/Ownable.sol",
         "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "@openzeppelin/contracts/utils/cryptography/MerkleProof.sol",
         "@openzeppelin/contracts/security/ReentrancyGuard.sol",
-        "./MerkleDistributorV3.sol"
+        "./interfaces/IMerkleDistributorV1.sol"
       ],
       "versionPragmas": [
         "^0.8.9"
       ],
       "artifacts": [
-        "MerkleDistributionFactory"
+        "MerkleDistributorV1"
       ]
     },
-    "/home/mikhil/work/MD/merkle-distributor/node_modules/@openzeppelin/contracts/access/Ownable.sol": {
-      "lastModificationDate": 1663738583621,
-      "contentHash": "e436cea06129be2c73cda4b1acc848b5",
-      "sourceName": "@openzeppelin/contracts/access/Ownable.sol",
-      "solcConfig": {
-        "version": "0.8.9",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "../utils/Context.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "Ownable"
-      ]
-    },
-    "/home/mikhil/work/MD/merkle-distributor/node_modules/@openzeppelin/contracts/security/ReentrancyGuard.sol": {
-      "lastModificationDate": 1663738583629,
-      "contentHash": "92f9448b23a90ea3bb932ee55cc3ccce",
-      "sourceName": "@openzeppelin/contracts/security/ReentrancyGuard.sol",
+    "/home/mikhil/work/MD/merkle-distributor/contracts/interfaces/IMerkleDistributorV1.sol": {
+      "lastModificationDate": 1663765107696,
+      "contentHash": "56f8203afc194141756401ebc368ad67",
+      "sourceName": "contracts/interfaces/IMerkleDistributorV1.sol",
       "solcConfig": {
         "version": "0.8.9",
         "settings": {
@@ -550,10 +921,47 @@
       },
       "imports": [],
       "versionPragmas": [
-        "^0.8.0"
+        ">=0.5.0"
       ],
       "artifacts": [
-        "ReentrancyGuard"
+        "IMerkleDistributorV1"
+      ]
+    },
+    "/home/mikhil/work/MD/merkle-distributor/contracts/test/TestERC20.sol": {
+      "lastModificationDate": 1663765091864,
+      "contentHash": "c0b9b25016df378788c623590a7babd0",
+      "sourceName": "contracts/test/TestERC20.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/ERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.9"
+      ],
+      "artifacts": [
+        "TestERC20"
       ]
     }
   }
